@@ -1,0 +1,80 @@
+---
+title: "Report for Happiness around the world"
+subtitle: "A story of 2015-2022 Happiness reports"
+author: "Zhixiang Yang (Elvis)"
+email: "zyan0056@student.monash.edu"
+date: "10th April 2022"
+pdflink: ""
+bgimg: "images/nye1.jpg"
+output:
+  xaringan::moon_reader:
+    css:
+      - ninjutsu 
+      - "assets/animate.css"
+      - "assets/monash-logo.css"
+      - "assets/monash-brand.css"
+      - "assets/monash-fonts.css"
+      - "assets/styles.css" # small improvements
+      - "assets/custom.css" # add your own CSS here!
+    self_contained: false 
+    seal: false 
+    chakra: 'libs/remark-latest.min.js'
+    lib_dir: libs
+    includes:
+      in_header: "assets/custom.html"
+    mathjax: "assets/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    nature:
+      highlightStyle: github 
+      highlightLanguage: r 
+      highlightLines: true
+      highlightSpans: false 
+      countIncrementalSlides: false
+      slideNumberFormat: '%current%/%total%'
+      navigation:
+        scroll: false 
+        touch: true
+        click: false
+      ratio: '16:9'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+```{r titleslide, child="components/titleslide.Rmd"}
+```
+<!-- DO NOT DELETE -- title slide -->
+---
+<!-- class only if you want to change pls change here -->
+# Big title (Blue bar )
+
+# smaller (bar plot shape)
+
+
+## even Smaller (pie char)
+
++ .font_my[dot
++ .font_my_2[dot under dot ]
+]
+
+---
+# Different fonts 
+
+.font_my[ contents ]
+
+.font_my_2[]
+
+.grid[multiple plots ]
+
+.font_small[]
+
+
+
+
+<!-- DO NOT DELETE -- end slide -->
+---
+```{r endslide, child="components/endslide.Rmd"}
+```
+
+
