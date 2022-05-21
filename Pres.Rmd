@@ -73,19 +73,18 @@ Our Data is gained in the <b>Kaggle</b> with 2015-2022 world happiness report da
 ---
 # Introduction 
 
-__Our research are aim to solve the following questions__
+<br>
 
+__Our research are aim to solve the following questions__
 
 + The influences of COVID-19 on the world happiness score and correlations between happiness in 2021. 
 
-<br>
-
+--
 + The changes of happiness between 2015 and 2022 in different regions. 
-<br>
 
+--
 + What is the relationship between economic situation and health status with the happiness. 
-
-<br>
+--
 
 + In the modelling part, what are the important variables in explaining happiness scores and their performances in linear model. 
 
@@ -104,9 +103,50 @@ We will investigating the important variables in explaining the happiness scores
 
 
 ---
+# Modelling (Training)
+
++ <b>Sample Split Ratio</b> = 0.4
+
+<img src="figure/ggsp04.png" style="width: 80%; float:center"/>
+
+
+---
+# Modelling (Training)
+
++ <b>Sample Split Ratio</b> = 0.5
+
+<img src="figure/ggsp05.png" style="width: 80%; float:center"/>
+
+---
+
+# Modelling (Training)
+
++ <b>Sample Split Ratio</b> = 0.6
+
+
+<img src="figure/ggsp06.png" style="width: 80%; float:center"/>
+
+---
+
+
+# Modelling (Training)
+
++ <b>Sample Split Ratio</b> = 0.7
+
+<img src="figure/ggsp07.png" style="width: 80%; float:center"/>
+
+---
+
+# Modelling (Training)
+
+
++ <b>Sample Split Ratio</b> = 0.8
 
 
 
+<img src="figure/ggsp08.png" style="width: 80%; float:center"/>
+
+---
 
 
 <!-- DO NOT DELETE -- end slide -->
