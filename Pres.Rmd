@@ -1,7 +1,7 @@
 ---
 title: "Report for Happiness around the world"
 subtitle: "A story of 2015-2022 Happiness reports"
-author: "Zhixiang Yang (Elvis)"
+author: "Group 07 ETC5513"
 email: "zyan0056@student.monash.edu"
 date: "10th April 2022"
 pdflink: ""
@@ -46,28 +46,65 @@ library(tidyverse)
 ```
 <!-- DO NOT DELETE -- title slide -->
 ---
-<!-- class only if you want to change pls change here -->
-# Big title (Blue bar )
-
-# smaller (bar plot shape)
+# Background
 
 
-## even Smaller (pie char)
+<br>
 
-+ .font_my[dot
-+ .font_my_2[dot under dot ]
+
+.grid[
+
+<div style="font-size:18pt">
+<h2>Abstract and Data source</h2>
+<p>
+<b style="font-size:24pt">Motivations</b><br>
+Are you interested in Happiness? The motivation for us to analyse the World Happiness Report is becasue of the deep idea that individuals are able to report their subjective experience in a way which can meaningfully guide individuals and societies towards better lifes. <br>
+<br>
+<b style="font-size:24pt">Data Source</b><br>
+Our Data is gained in the <b>Kaggle</b> with 2015-2022 world happiness report data cotaining factors related to the happiness scores in each country at a worldwide level.  
+</p>
+</div>
+
+<img src="images/happiness1.jpeg" alt="Trulli" style="width:60%;height:auto">
+<img src="images/happiness2.jpeg" alt="Trulli" style="width:53%;height:auto">
+<img src="images/happiness3.jpeg" alt="Trulli" style="width:40%;height:auto">
 ]
 
 ---
-# Different fonts 
+# Introduction 
 
-.font_my[ contents ]
+__Our research are aim to solve the following questions__
 
-.font_my_2[]
 
-.grid[multiple plots ]
++ The influences of COVID-19 on the world happiness score and correlations between happiness in 2021. 
 
-.font_small[]
+<br>
+
++ The changes of happiness between 2015 and 2022 in different regions. 
+<br>
+
++ What is the relationship between economic situation and health status with the happiness. 
+
+<br>
+
++ In the modelling part, what are the important variables in explaining happiness scores and their performances in linear model. 
+
+---
+# Modelling
+
+We will investigating the important variables in explaining the happiness scores via fitting various models including: 
+
++ Multivariate Model 
+
++ Support Vector Machine Model 
+
++ Decision Tree Model 
+
++ Random Forest Model
+
+
+---
+
 
 
 
