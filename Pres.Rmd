@@ -75,14 +75,15 @@ library(EBImage)
 + .font_my_2[dot under dot ]
 ]
 
+<!-- Remember to delete the above part --EY  -->
 ---
 # Research Question 
 
--  The top 10 countries in happiness score since COVID-19
+-  The top 10 countries in happiness score since COVID-19. 
 
--  The distribution of the top 10 countries on the world map in 2021
+-  The distribution of the top 10 countries on the world map in 2021. 
 
--  Relation between happiness score in these 10 countries and other 6 attributes in 2021
+-  Relation between happiness score in these 10 countries and other 6 attributes in 2021. 
 ---
 # The top 10 countries in happiness score since COVID-19
 
@@ -129,16 +130,16 @@ grid.arrange(g1, g2, ncol = 2,nrow= 1)
 ---
 # The distribution of the 10 countries on the world map
 
-```{r,fig.align='center', fig.width=12}
-knitr::include_graphics("figure/worldmap.jpeg")
-```
+<!-- Use this code to add the figure -->
+
+<img src="figure/worldmap.jpeg" style="width:80%">
+
 ---
 # Relation between Happiness score and other indicators in 2021
 
-```{r}
-knitr::include_graphics("figure/Relation.jpeg")
-```
+<!-- Use this code to add the figure -->
 
+<img src="figure/Relation.jpeg" style="width:80%">
 
 ---
 # Different fonts 
