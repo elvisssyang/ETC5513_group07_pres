@@ -196,35 +196,65 @@ log_{score}&= -2.7848-0.0006\ cpi+0.0776\ log_{economy}\\&-0.0058\ log_{populati
 ---
 # Multivariate Linear Model
 
-+ __Variable Correlation__
++ __Analysis of Residuals__
+
+.grid[
+
+<img src="figure/stdresd.png" style="width:100%; float:left"/>
+
+<img src="figure/nmqq.png" style="width:100%; float:right"/>
 
 
+]
 
 
 ---
 # Multivariate Linear Model
 
-__Insights on Our Multivariate Linear Model  Model__ 
++ __Analysis of Residuals__
+
+<img src="figure/disterr.png" style="width: 50%; float:left "/>
+
+<img src="figure/influence.png" style="width: 50%; float:right"/>
+
+
+---
+# Multivariate Linear Model
+
+__👀 Insights on Our Multivariate Linear Model Model __ 
 
 
 .grid[
 
+
+
+.font_my[
+
+
+
+
+- <b>Disadvantages</b>: 
+
 .font_my_2[
 
+- <b>Endogenous Bias</b>: Another latent variable in the error term still correlate with the variables inside the model, which influence our model's accuracy. 
+
+
+
+- <b>Sample Selection Bias</b>: Our data source is not perfect. We only use the most recent data available to us , which is year 2020 data. The situation is the conclusion maybe not suitable for further analysis because of the COVID influences. In terms of NA values, we simply excluded them.The exclusion of the subset can influence the statistical significance of the tests, can be biased. 
+
+
+- <b>Significant Outliers</b>: From the analysis before we can get that there are few significant outliers may also influence the modelling accuracy too. 、
 
 
 ]
 
-.font_my_2[
-
-+ <b>Endogenous Bias</b>: Another latent variable in the error term still correlate with the variables inside the model. 
-
-
-
-+ <b>Sample Selection Bias</b>: Our data source is not perfect. We only use the most recent data avaliable to us , which is year 2020 data. The situation during COVID and past COVID may different. In terms of NA values, we simply dropped out, which may influence our model prediction. 
-
-
 ]
+
+
+<img src="figure/worldmap.png" style="width: 90%; float:right"/>
+
+
 
 ]
 ---
@@ -250,7 +280,7 @@ __Insights on Our Multivariate Linear Model  Model__
 
 <br>
 
-.monash-blue[I would also appreciate our tutor **Naveen** and **Fan** for your coordination along this unit.]
+.monash-blue[We would also appreciate our tutor **Naveen** and **Fan** for your coordination along this unit.]
 
 
 
