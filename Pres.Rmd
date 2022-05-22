@@ -147,6 +147,111 @@ We will investigating the important variables in explaining the happiness scores
 <img src="figure/ggsp08.png" style="width: 80%; float:center"/>
 
 ---
+# Modelling 
+
+__🥳Overall we can see the performance of <b>Random Forest</b> is the best model to fit this data. Then we can get our variable importance.__
+
+.grid[
+
+.font_my_2[
+<b>Variable importance</b>
+
+We can see the most important variables here are the economy (in GDP per capita) and Health. This is make sense because the economy and health are basic living demand for people. 
+
+<b>Another Insight</b>
+
+The Random Forest Model has few limitations. One major limitation is it cannot give us a better scope on the relationships between variables. 
+
+]
+
+
+<img src="figure/varimp.png" style="width: 80%; float:right"/>
+
+]
+
+
+---
+# Multivariate Linear model 
+
+
++ __To analyse the relationships between these variables, we constructed a <b>Multivariate Linear Model</b> in 2020. __
+
+
+$$\begin{aligned}
+log_{score}&= -2.7848-0.0006\ cpi+0.0776\ log_{economy}\\&-0.0058\ log_{population}+1.1040\ log_{health}
+\end{aligned}$$
+
+
+.font_my_2[
+
++ Based on the historical data, we found that the model is no longer efficient (with large $R^2$ value). Then we decide to add another two variables we think it's important to contribute the happiness score (Consumer Price Index (CPI) and Population of each country) and combined with the two important variables that we mentioned before. 
+
++ We then take the logarithm to analyse the percentage change in these variables. Then all the coefficients are the percentage change ratio can be written $\frac{\%\Delta Happiness}{\%\Delta Variables}$. 
+
++ In this year, people are extremely concerned about their health due to the global pandemic situation. 
+]
+
+
+
+---
+# Multivariate Linear Model
+
++ __Variable Correlation__
+
+
+
+
+---
+# Multivariate Linear Model
+
+__Insights on Our Multivariate Linear Model  Model__ 
+
+
+.grid[
+
+.font_my_2[
+
+
+
+]
+
+.font_my_2[
+
++ <b>Endogenous Bias</b>: Another latent variable in the error term still correlate with the variables inside the model. 
+
+
+
++ <b>Sample Selection Bias</b>: Our data source is not perfect. We only use the most recent data avaliable to us , which is year 2020 data. The situation during COVID and past COVID may different. In terms of NA values, we simply dropped out, which may influence our model prediction. 
+
+
+]
+
+]
+---
+# Conclusion 
+
+
+
+
+
+
+---
+# Acknowledgement 👨‍💻 
+<br>
+
+<br>
+
+<br>
+
+
+.monash-blue[We would like to gratitude our Lecturer, 
+
+**Patricia Menéndez**, for your patient and selfless guidance.]
+
+<br>
+
+.monash-blue[I would also appreciate our tutor **Naveen** and **Fan** for your coordination along this unit.]
+
 
 
 <!-- DO NOT DELETE -- end slide -->
