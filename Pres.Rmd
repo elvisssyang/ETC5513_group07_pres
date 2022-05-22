@@ -57,11 +57,11 @@ library(tidyverse)
 <div style="font-size:18pt">
 <h2>Abstract and Data source</h2>
 <p>
-<b style="font-size:24pt">Motivations</b><br>
-Are you interested in Happiness? The motivation for us to analyse the World Happiness Report is becasue of the deep idea that individuals are able to report their subjective experience in a way which can meaningfully guide individuals and societies towards better lifes. <br>
+<b style="font-size:24pt">Motivation</b><br>
+Do you know what drives happiness? The motivation for us to analyse the World Happiness Report is the deep idea that individuals are able to report their subjective experiences in a way which can meaningfully guide individuals and societies towards better lifes. <br>
 <br>
 <b style="font-size:24pt">Data Source</b><br>
-Our Data is gained in the <b>Kaggle</b> with 2015-2022 world happiness report data cotaining factors related to the happiness scores in each country at a worldwide level.  
+Our data is the 2015-2022 world happiness report obtained from the <b>Kaggle</b> website. It contains factors that are related to the happiness scores in each country at a world wide level.   
 </p>
 </div>
 
@@ -75,25 +75,25 @@ Our Data is gained in the <b>Kaggle</b> with 2015-2022 world happiness report da
 
 <br>
 
-__Our research are aim to solve the following questions__
+__Our research aim to solve the following questions__
 
-+ The influences of COVID-19 on the world happiness score and correlations between happiness in 2021. 
++ The influences of COVID-19 on the world happiness score and the correlations between happiness in 2021. 
 
 --
 + The changes of happiness between 2015 and 2022 in different regions. 
 
 --
-+ What is the relationship between economic situation and health status with the happiness. 
++ The impact of economic situation and the health status on happiness.
 --
 
-+ In the modelling part, what are the important variables in explaining happiness scores and their performances in linear model. 
++ The importance of variables in explaining happiness scores and an analysis of a multivariate linear model. 
 
 ---
 # Modelling
 
-We will investigating the important variables in explaining the happiness scores via fitting various models including: 
+We will investigate the important variables in explaining the happiness scores via fitting various models including: 
 
-+ Multivariate Model 
++ Multivariate Linear Model 
 
 + Support Vector Machine Model 
 
@@ -149,18 +149,18 @@ We will investigating the important variables in explaining the happiness scores
 ---
 # Modelling 
 
-__🥳Overall we can see the performance of <b>Random Forest</b> is the best model to fit this data. Then we can get our variable importance.__
+__🥳Overall we can see the <b>Random Forest</b> model performs the best of fitting this data. Then we can sort our variables by their importance.__
 
 .grid[
 
 .font_my_2[
-<b>Variable importance</b>
+<b>Variable importance order</b>
 
-We can see the most important variables here are the economy (in GDP per capita) and Health. This is make sense because the economy and health are basic living demand for people. 
+The right table indicates that the most important variables here are the economy (in GDP per capita) and Health. This makes sense because the better economy generally means the higher living standards and social wellbeings. Good health statues ensures higher productivity and the ability to enjoy the life, which will make people feel happy. 
 
 <b>Another Insight</b>
 
-The Random Forest Model has few limitations. One major limitation is it cannot give us a better scope on the relationships between variables. 
+The Random Forest Model has a few limitations. One major limitation is that it cannot provides a better scope on the relationships between variables. 
 
 ]
 
@@ -178,7 +178,7 @@ The Random Forest Model has few limitations. One major limitation is it cannot g
 
 
 $$\begin{aligned}
-log_{score}&= -2.7848-0.0006\ cpi+0.0776\ log_{economy}\\&-0.0058\ log_{population}+1.1040\ log_{health}
+log(score)&= -2.7848-0.0006\ cpi+0.0776\ log(economy)\\&-0.0058\ log_(population)+1.1040\ log_(health)
 \end{aligned}$$
 
 
@@ -233,7 +233,7 @@ __👀 Insights on Our Multivariate Linear Model Model __
 
 
 
-- <b>Disadvantages</b>: 
+- <b>Limitations of our analysis</b>: 
 
 .font_my_2[
 
@@ -241,7 +241,7 @@ __👀 Insights on Our Multivariate Linear Model Model __
 
 
 
-- <b>Sample Selection Bias</b>: Our data source is not perfect. We only use the most recent data available to us , which is year 2020 data. The situation is the conclusion maybe not suitable for further analysis because of the COVID influences. In terms of NA values, we simply excluded them.The exclusion of the subset can influence the statistical significance of the tests, can be biased. 
+- <b>Sample Selection Bias</b>: Our data source is not perfect. We only use the most recent data available , which is year 2020 data. The world was still experiencing the uncertain impacts of COVID-19 in 2020 at that time. In terms of NA values, we simply excluded them, which may lead to truncation bias.The exclusion of the subset can influence the statistical significance of the tests, can be biased. 
 
 
 - <b>Significant Outliers</b>: From the analysis before we can get that there are few significant outliers may also influence the modelling accuracy too. 、
@@ -259,6 +259,8 @@ __👀 Insights on Our Multivariate Linear Model Model __
 ]
 ---
 # Conclusion 
+
+
 
 
 
