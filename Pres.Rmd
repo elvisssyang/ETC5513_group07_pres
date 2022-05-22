@@ -59,6 +59,16 @@ library(tidyverse)
 ]
 
 ---
+# Research Question 
+
+- The top 10 countries in happiness score since COVID-19
+
+- The distribution of the top 10 countries on the world map in 2021
+
+- Relation between happiness score in these 10 countries and other 6 attributes in 2021
+---
+
+---
 # Different fonts 
 
 .font_my[ contents ]
