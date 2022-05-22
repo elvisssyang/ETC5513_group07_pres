@@ -40,6 +40,20 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(kableExtra)
+library(sf)
+library(here)
+library(lubridate)
+library(cowplot)
+library(janitor)
+library(maps)
+library(plotly)
+require(wbstats)
+library(RColorBrewer)
+library(repr)
+library(gridExtra)
 ```
 
 ```{r titleslide, child="components/titleslide.Rmd"}
@@ -67,6 +81,50 @@ library(tidyverse)
 
 - Relation between happiness score in these 10 countries and other 6 attributes in 2021
 ---
+# The top 10 countries in happiness score since COVID-19
+
+```{r, echo=FALSE}
+happiness_2020 <- read_csv(here("data", "2020.csv"))
+happiness_2021 <- read_csv(here("data", "2021.csv"))
+
+top10_2020 <- happiness_2020 %>%
+  mutate(RANK = as.numeric(rownames(happiness_2020))) %>%
+  select("RANK","Country name","Ladder score") %>%
+  rename("Country" = "Country name",
+         "Happiness score" = "Ladder score") %>%
+  arrange(desc("Happiness score")) %>%
+  head(n = 10)
+top10_2021 <- happiness_2021 %>% 
+  mutate(RANK = as.numeric(rownames(happiness_2021))) %>%
+  select("RANK","Country name","Ladder score") %>% 
+  rename("Country" = "Country name",
+          "Happiness score" = "Ladder score") %>%
+  arrange(desc("Happiness score"))  %>%
+  head(n = 10)
+
+g1 <- ggplot(top10_2020,
+             aes(x=factor(Country,levels=Country),
+                 y=RANK))+
+  geom_bar(stat="identity",
+           width=0.5,
+           fill="navyblue") +
+  theme(axis.text.x = element_text(angle=90, vjust=0.6)) + 
+  labs(title="Top10 Happiest Countries-2020",
+       x="Country",y="Rank")
+g2 <- ggplot(top10_2021,
+             aes(x=factor(Country,levels=Country),
+                 y=RANK))+
+  geom_bar(stat="identity",
+           width=0.5,
+           fill="darkgreen") +
+  theme(axis.text.x = element_text(angle=90, vjust=0.6)) + 
+  labs(title="Top10 Happiest Countries-2021",
+       x="Country",y="Rank")
+
+grid.arrange(g1, g2, ncol = 2,nrow= 1)
+```
+---
+
 
 ---
 # Different fonts 
