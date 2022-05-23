@@ -283,7 +283,7 @@ The right table indicates that the most important variables here are the economy
 &lt;br&gt;
 
  
-&lt;b&gt;&lt;u&gt;Limitation&lt;/u&gt;&lt;/b&gt;: cannot provides a better scope on the relationships of variables
+&lt;b&gt;&lt;u&gt;Limitation&lt;/u&gt;&lt;/b&gt;: The random forest model cannot provides a better scope on the relationships of variables.
 
 ]
 
@@ -291,26 +291,22 @@ The right table indicates that the most important variables here are the economy
 
 ]
 
+
 ---
 #Little Improvement 
-## To better discover the happiness score, two new variables were added🥳. 
+#### To better discover the happiness score, two new variables will be added🥳. 
 
-
-&lt;br&gt;
 .grid[
 
 .font_my_2[
-&lt;b&gt;New Data For better Analysis&lt;/b&gt;
 
++  We cannot tell the order of importance because our target is to improve the happiness index efficiently. 
 
-+ Based on the historical data, we found that the fitness of classical linear model is not fitting well. 
++ The feeling of Freedom and Generosity is too abstract.
 
++ People have different standards towards to them. 
 
-+ The current variables in our linear model are have similar coefficients and they all significant. 
-
-
-
-+ To make improvement, we decide to add another two variables we think it's important to contribute the happiness score (Consumer Price Index (CPI) and Population of each country) and combined with the two important variables that we mentioned before. 
++ We build up the model with the Economy, Health, CPI(Consumer Price Index), year, and Population.  
 
 ]
 
@@ -331,7 +327,7 @@ The right table indicates that the most important variables here are the economy
 
 
 `\begin{align*}
-log(score)= -4.6000-0.0008\ cpi+0.2591\ log(economy)\\-0.0026\ log(population)+0.0114\ log(health)+0.0032log(year)
+log(score)= -4.6000-0.0008\ cpi+0.2591\ log(economy)\\-0.0026\ log(population)+0.0114\ log(health)+0.0032\ year
 \end{align*}`
 
 
@@ -429,14 +425,14 @@ __Based on above analysis, we explored few ideas behind the World Happiness Repo
 
 --
 .font_my_2[
-- Since the outbreak of COVID-19, the countries with highest happiness are mainly from Northern and Western Europe and Finland has been the happiest country during the COVID-19 period. 
+- Since the outbreak of COVID-19, the countries with highest happiness score are mainly from Northern and Western Europe. Finland has been the happiest country during the COVID-19 period. 
 ]
 
 --
 
 .font_my_2[
 
-- People living in the areas with better economic situations will feel happier and with less fluctuations on happiness scores than those who live in rural areas. Moreover, health status will also help to increase the happiness of people, no matter where they live. 
+- People living in better economic situations often feel happier and their scores don't change much than those who live in rural areas. Moreover, health status will also help to increase the happiness, no matter where they live. 
 
 ]
 
@@ -444,11 +440,32 @@ __Based on above analysis, we explored few ideas behind the World Happiness Repo
 
 .font_my_2[
 
-- The most important variables to explain the happiness score are the economy situation (measured in GDP per capita) and health statues. Moreover, in our Linear Model, they both contribute an positive elasticity to the happiness score. Nevertheless, we can also find there are also two relevant variables (Population, Consumer Price Index) will lead to a negative elasticty to the happiness score. 
+- The most important variables to explain the happiness score are the economy situation (measured in GDP per capita) and health statues. Moreover, in our Linear Model, they both contribute an positive elasticity to the happiness score. Nevertheless, we discover that two relevant variables (Population, Consumer Price Index) lead to a negative elasticity to the happiness score. 
 
 ]
 
+---
+class: center
+# Collaboration through git  
 
+
+
+&lt;img src="figure/git1.png" style="width: 100%; float:left"/&gt;
+
+
+---
+class: center
+# Collaboration through git  
+
+&lt;img src="figure/git2.png" style="width: 50%; float:center"/&gt;
+
+&lt;img src="figure/git3.png" style="width: 60%; float:bottom"/&gt;
+
+
+---
+class:center
+# Collaboration through git  
+&lt;img src="figure/git4.png" style="width: 80%; float:bottom"/&gt;
 
 ---
 # Acknowledgement 👨‍💻 
