@@ -104,6 +104,27 @@ __Our research aim to solve the following questions__
 # Exploratory Data Analysis 
 ## The impact of economic situation and the health status on happiness.
 
+<img src="figure/plot.gif" style="width: 90%; float:center"/>
+
+
+
+
+---
+# Exploratory Data Analysis 
+## The impact of economic situation and the health status on happiness.
+
+
+<img src="figure/WYQ2.png" style="width: 80%; float:center"/>
+
+--
+
+.font_my_2[
+
+🧐<b>What we can see?</b>
+
+- Based on the figure above and previous analysis. We can conclude that there is a positive correlation for both economic situation and health status on Happiness score between 2015 and 2022. The idea behind this is the better economic situation and health status people have, they will feel more happy. 
+
+]
 
 ---
 # Modelling
@@ -307,10 +328,28 @@ __👀 Insights on Our Multivariate Linear Model Model __
 ---
 # Conclusion 
 
+__Based on above analysis, we explored few ideas behind the World Happiness Report from 2015 to 2022. Then we can conclude: __
 
+--
+.font_my_2[
+- Since the outbreak of COVID-19, the countries with highest happiness are mainly from Northern and Western Europe and Finland has been the happiest country during the COVID-19 period. 
+]
 
+--
 
+.font_my_2[
 
+- People living in the areas with better economic situations will feel happier and with less fluctuations on happiness scores than those who live in rural areas. Moreover, health status will also help to increase the happiness of people, no matter where they live. 
+
+]
+
+--
+
+.font_my_2[
+
+- The most important variables to explain the happiness score are the economy situation (measured in GDP per capita) and health statues. Moreover, in our Linear Model, they both contribute an positive elasticity to the happiness score. Nevertheless, we can also find there are also two relevant variables (Population, Consumer Price Index) will lead to a negative elasticty to the happiness score. 
+
+]
 
 
 
