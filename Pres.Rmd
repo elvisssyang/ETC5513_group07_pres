@@ -135,7 +135,7 @@ grid.arrange(g1, g2, ncol = 2,nrow= 1)
 <img src="figure/worldmap.jpeg" style="width:80%">
 
 ---
-# Relation between Happiness score and other indicators in 2021
+# Relation between Happiness score and other indicators 
 
 <!-- Use this code to add the figure -->
 
