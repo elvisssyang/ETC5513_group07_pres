@@ -89,76 +89,9 @@ Our data is the 2015-2022 world happiness report obtained from the <b>Kaggle</b>
 ]
 
 <!-- Remember to delete the above part --EY  -->
----
-# Introduction 
-# Research Question 
-
--  The top 10 countries in happiness score since COVID-19. 
-
--  The distribution of the top 10 countries on the world map in 2021. 
-
--  Relation between happiness score in these 10 countries and other 6 attributes in 2021. 
----
-# The top 10 countries in happiness score since COVID-19
-
-```{r, fig.align='center', fig.width= 12}
-happiness_2020 <- read_csv(here("data", "2020.csv"))
-happiness_2021 <- read_csv(here("data", "2021.csv"))
-
-top10_2020 <- happiness_2020 %>%
-  mutate(RANK = as.numeric(rownames(happiness_2020))) %>%
-  select("RANK","Country name","Ladder score") %>%
-  rename("Country" = "Country name",
-         "Happiness score" = "Ladder score") %>%
-  arrange(desc("Happiness score")) %>%
-  head(n = 10)
-top10_2021 <- happiness_2021 %>% 
-  mutate(RANK = as.numeric(rownames(happiness_2021))) %>%
-  select("RANK","Country name","Ladder score") %>% 
-  rename("Country" = "Country name",
-          "Happiness score" = "Ladder score") %>%
-  arrange(desc("Happiness score"))  %>%
-  head(n = 10)
-
-g1 <- ggplot(top10_2020,
-             aes(x=factor(Country,levels=Country),
-                 y=RANK))+
-  geom_bar(stat="identity",
-           width=0.5,
-           fill="navyblue") +
-  theme(axis.text.x = element_text(angle=90, vjust=0.6)) + 
-  labs(title="Top10 Happiest Countries-2020",
-       x="Country",y="Rank")
-g2 <- ggplot(top10_2021,
-             aes(x=factor(Country,levels=Country),
-                 y=RANK))+
-  geom_bar(stat="identity",
-           width=0.5,
-           fill="darkgreen") +
-  theme(axis.text.x = element_text(angle=90, vjust=0.6)) + 
-  labs(title="Top10 Happiest Countries-2021",
-       x="Country",y="Rank")
-
-grid.arrange(g1, g2, ncol = 2,nrow= 1)
-```
----
-# The distribution of the 10 countries on the world map
-
-<!-- Use this code to add the figure -->
-
-<img src="figure/worldmap.jpeg" style="width:100%">
 
 ---
-# Relation between Happiness score and other indicators 
-
-<!-- Use this code to add the figure -->
-
-<img src="figure/Relation.jpeg" style="width:100%">
-
----
-# Different fonts 
-
-<br>
+# Research Aim 
 
 __Our research aim to solve the following questions__
 
@@ -174,15 +107,52 @@ __Our research aim to solve the following questions__
 + The important variables in explaining happiness scores via different models and their marginal effects in a linear model. 
 
 
+
+---
+# Exploratory Data Analysis Part I
+#  Research Question 
+
+-  The top 10 countries in happiness score since COVID-19. 
+
+-  The distribution of the top 10 countries on the world map in 2021. 
+
+-  Relation between happiness score in these 10 countries and other 6 attributes in 2021. 
+
+---
+class: center
+# Exploratory Data Analysis
+## The top 10 countries in happiness score since COVID-19
+
+<img src="figure/top10.png" style="width:70%">
+
 ---
 # Exploratory Data Analysis
+## The distribution of the 10 countries on the world map
+
+<!-- Use this code to add the figure -->
+
+<img src="figure/worldmap2021.png" style="width:100%">
+
+---
+# Exploratory Data Analysis 
+## Relation between Happiness score and other indicators 
+
+
+
+<img src="figure/Relation.png" style="width:100%">
+
+---
+# Exploratory Data Analysis PART II 
 ## How will the happiness change between 2015 and 2022 in different regions?
 
 
-<img src="figure/WYQ1.png" style="width: 80%; float:center"/>
+<img src="figure/WYQ1.png" style="width: 70%;float:center"/>
 
+--
+.font_my_2[
+🧐<u><b>What is the relationship between economic situation and health status with the happiness?</b></u>
 
-
+]
 
 ---
 # Exploratory Data Analysis 
@@ -272,21 +242,23 @@ We will investigate the important variables in explaining the happiness scores v
 
 __🥳Overall we can see the <b>Random Forest</b> model performs the best of fitting this data. Then we can sort our variables by their importance.__
 
+<br>
 .grid[
 
-.font_my_2[
+.font_my[
+
 <b>Variable importance order</b>
 
-The right table indicates that the most important variables here are the economy (in GDP per capita) and Health. This makes sense because the better economy generally means the higher living standards and social wellbeings. Good health statues ensures higher productivity and the ability to enjoy the life, which will make people feel happy. 
+The right table indicates that the most important variables here are the economy (in GDP per capita) and Health.
 
-<b>Another Insight</b>
+<br>
 
-The Random Forest Model has a few limitations. One major limitation is that it cannot provides a better scope on the relationships between variables. For example, marginal effects and percentage changes. 
+ 
+<b><u>Limitation</u></b>: cannot provides a better scope on the relationships of variables
 
 ]
 
-
-<img src="figure/varimp.png" style="width: 80%; float:right"/>
+<img src="figure/varimp.png" style="width: 80%; float:center"/>
 
 ]
 
@@ -301,9 +273,13 @@ The Random Forest Model has a few limitations. One major limitation is that it c
 .font_my_2[
 <b>New Data For better Analysis</b>
 
+
 + Based on the historical data, we found that the fitness of classical linear model is not fitting well. 
 
-+ The current variables in our linear model are have similar coefficients and they all significant. Due to the similar magnitudes in coefficients, we suspect the Happiness Score is simply an average of these factors. Moreover, we also have many different variables in the data set.  
+
++ The current variables in our linear model are have similar coefficients and they all significant. 
+
+
 
 + To make improvement, we decide to add another two variables we think it's important to contribute the happiness score (Consumer Price Index (CPI) and Population of each country) and combined with the two important variables that we mentioned before. 
 
@@ -335,7 +311,9 @@ log(score)= -4.6000-0.0008\ cpi+0.2591\ log(economy)\\-0.0026\ log(population)+0
 
 + We then take the logarithm to analyse the percentage change in these variables and eliminate the heteroscedasticity. Then all the coefficients are the percentage change ratio can be written $\frac{\%\Delta Happiness}{\%\Delta Variables}$. 
 
-+ We can see over 2016 to 2020 , a one percent increase in economy will increase the percentage change of happiness score by 25.91%. Then we can also see that the percentage change of health status will also lead a positive increase in happiness score. However, percentage changes on both Consumer Price index and population will lead to a negative percentage change in happiness score. It is make sense that with more people and higher good prices, people will feel stressed on their living conditions. 
++ We can see over 2016 to 2020 , a one percent increase in economy will increase the percentage change of happiness score by 25.91%. 
+
++ we can also see that the percentage change of health status will also lead a positive increase in happiness score. However, percentage changes on both Consumer Price index and population will lead to a negative percentage change in happiness score. 
 ]
 
 
@@ -393,10 +371,16 @@ __👀 Insights on Our Multivariate Linear Model Model __
 
 
 
-- <b>Sample Selection Bias</b>: Our data source is not perfect. We only use the most recent data available , which is up to year 2020 data. The world was still experiencing the uncertain impacts of COVID-19 in 2020 at that time. Moreover, the structure of happiness ranks may also change after the pandemic. In terms of NA values, we simply excluded them, which may lead to truncation bias.The exclusion of the subset can influence the statistical significance of the tests, can be biased. 
+- <b>Sample Selection Bias</b>: 
+
+1. We only use the most recent data available (up to year 2020 data).
+
+2. The structure of happiness ranks may also change after the pandemic. 
+
+3. NAs may lead to truncation bias. 
 
 
-- <b>Significant Outliers</b>: From the analysis before we can get that there are few significant outliers may also influence the modelling accuracy too.
+4. <b>Significant Outliers</b>: From the analysis before we can get that there are few significant outliers may also influence the modelling accuracy too.
 
 
 ]
@@ -446,13 +430,13 @@ __Based on above analysis, we explored few ideas behind the World Happiness Repo
 <br>
 
 
-.monash-blue[We would like to gratitude our Lecturer, 
+.monash-blue[We would like to thank our Lecturer, 
 
-**Patricia Menéndez**, for your patient and selfless guidance.]
+**Patricia Menéndez**, for your kind help]
 
 <br>
 
-.monash-blue[We would also appreciate our tutor **Naveen** and **Fan** for your coordination along this unit.]
+.monash-blue[We would also appreciate our tutor **Naveen** and **Fan** for your devoted tutoring.]
 
 
 
