@@ -134,7 +134,7 @@ __Our research aim to solve the following questions__
 + The impact of economic situation and the health status on happiness.
 --
 
-+ The important variables in explaining happiness scores via different models and their marginal effects in a linear model. 
++ The important variables in explaining happiness scores via different models and discover their marginal effects in a linear model. 
 
 
 
@@ -156,12 +156,11 @@ class: center
 &lt;img src="figure/top10.png" style="width:70%"&gt;
 
 ---
+class: center
 # Exploratory Data Analysis
-## The distribution of the 10 countries on the world map
 
-&lt;!-- Use this code to add the figure --&gt;
 
-&lt;img src="figure/worldmap2021.png" style="width:100%"&gt;
+&lt;img src="figure/worldmap2021.png" style="width: 100%;float:center"/&gt;
 
 ---
 # Exploratory Data Analysis 
@@ -288,7 +287,7 @@ The right table indicates that the most important variables here are the economy
 
 ]
 
-&lt;img src="figure/varimp.png" style="width: 80%; float:center"/&gt;
+&lt;img src="figure/varimp1.png" style="width: 80%; float:center"/&gt;
 
 ]
 
@@ -296,8 +295,9 @@ The right table indicates that the most important variables here are the economy
 #Little Improvement 
 
 
+&lt;br&gt;
 
-
+&lt;br&gt;
 .grid[
 
 .font_my_2[
@@ -331,9 +331,9 @@ The right table indicates that the most important variables here are the economy
 + __To analyse the relationships between these variables, we constructed a &lt;b&gt;Multivariate Linear Model&lt;/b&gt; in 2016 to 2020. __
 
 
-`$$\begin{aligned}
+`\begin{align*}
 log(score)= -4.6000-0.0008\ cpi+0.2591\ log(economy)\\-0.0026\ log(population)+0.0114\ log(health)+0.0032log(year)
-\end{aligned}$$`
+\end{align*}`
 
 
 .font_my_2[
@@ -343,7 +343,7 @@ log(score)= -4.6000-0.0008\ cpi+0.2591\ log(economy)\\-0.0026\ log(population)+0
 
 + We can see over 2016 to 2020 , a one percent increase in economy will increase the percentage change of happiness score by 25.91%. 
 
-+ we can also see that the percentage change of health status will also lead a positive increase in happiness score. However, percentage changes on both Consumer Price index and population will lead to a negative percentage change in happiness score. 
++ We can also see that the percentage change of health status will also lead a positive increase in happiness score. However, percentage changes on both Consumer Price index and population will lead to a negative percentage change in happiness score. 
 ]
 
 
@@ -410,7 +410,7 @@ __👀 Insights on Our Multivariate Linear Model Model __
 3. NAs may lead to truncation bias. 
 
 
-4. &lt;b&gt;Significant Outliers&lt;/b&gt;: From the analysis before we can get that there are few significant outliers may also influence the modelling accuracy too.
+- &lt;b&gt;Significant Outliers&lt;/b&gt;: From the analysis before we can get that there are few significant outliers may also influence the modelling accuracy too.
 
 
 ]
