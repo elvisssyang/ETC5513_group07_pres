@@ -116,7 +116,7 @@ __Our research aim to solve the following questions__
 
 -  The distribution of the top 10 countries on the world map in 2021. 
 
--  Relation between happiness score in these 10 countries and other 6 attributes in 2021. 
+-  Relation between happiness score and other 6 attributes in 2021. 
 
 ---
 class: center
@@ -134,7 +134,7 @@ class: center
 
 ---
 # Exploratory Data Analysis 
-## Relation between Happiness score and other indicators 
+## Relation between Happiness score and other indicators in 2021
 
 
 
