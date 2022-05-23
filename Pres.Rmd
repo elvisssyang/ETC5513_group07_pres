@@ -106,10 +106,47 @@ __Our research aim to solve the following questions__
 
 + The important variables in explaining happiness scores via different models and discover their marginal effects in a linear model. 
 
+---
+# Exploratory Data Analysis PART I
+## How will happiness trends change between 2015 and 2022 in different regions?
+
+
+
+<img src="figure/WYQ1.png" style="width: 70%;float:center"/>
+
+--
+.font_my_2[
+🧐<u><b>What is the relationship between economic situation and health status with the happiness?</b></u>
+
+]
+
+---
+# Exploratory Data Analysis 
+#### From 2015 to 2022, What is the relationship between economic situation and health status with the happiness?
+
+
+<img src="figure/plot.gif" style="width: 90%; float:center"/>
 
 
 ---
-# Exploratory Data Analysis Part I
+# Exploratory Data Analysis 
+## From 2015 to 2022, What is the relationship between economic situation and health status with the happiness?
+
+
+<img src="figure/WYQ2.png" style="width: 80%; float:center"/>
+
+--
+
+.font_my_2[
+
+🧐<b>What we can see?</b>
+
+- Based on the figure above and previous analysis. We can conclude that there is a positive correlation for both economic situation and health status on Happiness score between 2015 and 2022. The idea behind this is the better economic situation and health status people have, they will feel more happy. 
+
+]
+
+---
+# Exploratory Data Analysis Part II
 #  Research Question 
 
 -  The top 10 countries in happiness score since COVID-19. 
@@ -130,7 +167,7 @@ class: center
 # Exploratory Data Analysis
 
 
-<img src="figure/worldmap2021.png" style="width: 100%;float:center"/>
+<img src="figure/worldmap2021.png" style="width: 80%;float:center"/>
 
 ---
 # Exploratory Data Analysis 
@@ -140,57 +177,20 @@ class: center
 
 <img src="figure/Relation.png" style="width:100%">
 
----
-# Exploratory Data Analysis PART II 
-## How will the happiness change between 2015 and 2022 in different regions?
 
-
-<img src="figure/WYQ1.png" style="width: 70%;float:center"/>
-
---
-.font_my_2[
-🧐<u><b>What is the relationship between economic situation and health status with the happiness?</b></u>
-
-]
-
----
-# Exploratory Data Analysis 
-## The impact of economic situation and the health status on happiness.
-
-<img src="figure/plot.gif" style="width: 90%; float:center"/>
-
-
-
-
----
-# Exploratory Data Analysis 
-## The impact of economic situation and the health status on happiness.
-
-
-<img src="figure/WYQ2.png" style="width: 80%; float:center"/>
-
---
-
-.font_my_2[
-
-🧐<b>What we can see?</b>
-
-- Based on the figure above and previous analysis. We can conclude that there is a positive correlation for both economic situation and health status on Happiness score between 2015 and 2022. The idea behind this is the better economic situation and health status people have, they will feel more happy. 
-
-]
 
 ---
 # Modelling
 
 We will investigate the important variables in explaining the happiness scores via fitting various models including: 
 
-+ <b>Multivariate Linear Model</b> : Simple Linear regression with multiple variables.
++ .font_my_2[<b>Multivariate Linear Model</b> : Simple Linear regression with multiple variables.]
 
-+ <b>Support Vector Machine Model</b>: Supervised Machine learning algorithm to fit regressions. 
++ .font_my_2[ <b>Support Vector Machine Model</b>: Supervised Machine learning algorithm to fit regressions. ]
 
-+ <b>Decision Tree Model</b>: Binary tree model have control statement. 
++ .font_my_2[ <b>Decision Tree Model</b>: Binary tree model have control statement. ]
 
-+ <b>Random Forest Model</b>: Use multiple learning algorithms (resampling and tree) to give us better results. 
++ .font_my_2[ <b>Random Forest Model</b>: Use multiple learning algorithms (resampling and tree) to give us better results. ]
 
 
 ---
@@ -263,9 +263,8 @@ The right table indicates that the most important variables here are the economy
 
 ---
 #Little Improvement 
+## To better discover the happiness score, two new variables were added🥳. 
 
-
-<br>
 
 <br>
 .grid[
