@@ -459,10 +459,13 @@ class:center
 
 **Patricia Menéndez**, for your kind help]
 
-<br>
+
 
 .monash-blue[We would also appreciate our tutor **Naveen** and **Fan** for your devoted tutoring.]
 
+
+
+.monash-blue[We would also appreciate **Emi Tanaka**'s `monash` package and `anicon` formats. ]
 
 ---
 #Online Figure sources 
